@@ -1,0 +1,27 @@
+{
+  "name": "mqtt-kafka-chat",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "mqtt": "^4.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  },
+  "scripts": {
+    "start:client": "nodemon ./src/client.js",
+    "start:server": "nodemon ./src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sudoak/mqtt-kafka-chat.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sudoak/mqtt-kafka-chat/issues"
+  },
+  "homepage": "https://github.com/sudoak/mqtt-kafka-chat#readme"
+}
