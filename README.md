@@ -1,1 +1,1 @@
-# mqtt-kafka-chat
+# mqtt-chat
