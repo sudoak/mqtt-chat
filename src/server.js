@@ -35,5 +35,12 @@
 const MQTT = require('./index');
 
 const porter = new MQTT()
-porter.subscribe(['test']);
-porter.pubMessage('presence', 'kutte');
+// porter.subscribe(['test']);
+
+setInterval(()=> 
+porter.pubMessage('test', 
+`testing ${Date.now()}`, 
+{qos:2}, 
+function(err){
+  console.log(err);
+}), 3000)

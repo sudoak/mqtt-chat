@@ -4,7 +4,7 @@ const options = {
   clientId: 'mqttjs01',
   username: 'admin',
   password: "rooter",
-  clean: true
+  clean: false,
 }
 
 const ERROR = 'error';
@@ -32,8 +32,8 @@ class MQTTServer {
       this.client.subscribe(topic);
     }.bind(this));
   }
-  pubMessage(topic, message) {
-    this.client.publish(topic, message)
+  pubMessage(topic, message, options) {
+    this.client.publish(topic, message, {...options})
   }
 }
 
