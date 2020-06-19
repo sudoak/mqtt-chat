@@ -1,4 +1,5 @@
 const MQTT = require("mqtt");
+
 const URL = 'mqtt://13.235.134.158';
 const options = {
   clientId: 'mqttjs01',
@@ -32,6 +33,11 @@ class MQTTServer {
       this.client.subscribe(topic);
     }.bind(this));
   }
+
+  unsubscribe(topic){
+    this.client.unsubscribe(topic);
+  }
+
   pubMessage(topic, message, options) {
     this.client.publish(topic, message, {...options})
   }
